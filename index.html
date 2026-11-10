@@ -9,7 +9,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Gnarly Eventos">
 <meta property="og:description" content="Festa de fã pra fã. Ingressos das nossas festas.">
-<meta property="og:image" content="https://gnarlyeventos.com.br/og.jpg">
+<meta property="og:image" content="https://gnarlyeventos.com.br/og-gnarly.jpg">
 <meta property="og:url" content="https://gnarlyeventos.com.br/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Crect width='10' height='10' rx='2' fill='%230A0A0A'/%3E%3Cpath d='M2 2h6v2.6H4.5v.8h1V4.2H8V8H2z' fill='%23C8FF1F'/%3E%3C/svg%3E">
@@ -23,7 +23,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,600;14..32,900&family=Cinzel:wght@700&family=Bungee&family=Press+Start+2P&family=Anton&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,600;14..32,900&family=Graduate&family=Bungee&family=Bebas+Neue&family=Anton&display=swap">
 <style>
 /* Marca Gnarly: preto, branco e verde ácido. A Gnarly é o carimbo; cada ingresso leva a cor da própria festa. */
 :root{
@@ -64,25 +64,40 @@ header{display:grid; gap:10px}
 .ingresso:hover{transform:translateY(-3px); filter:brightness(1.08)}
 .ingresso:focus-visible{outline:none; filter:brightness(1.15)}
 .ingresso:focus-visible .corpo{box-shadow:inset 0 0 0 3px var(--acido)}
-.corpo{display:flex; align-items:center; justify-content:center; padding:14px 16px; min-width:0; border-radius:12px 0 0 12px}
+.corpo{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; padding:14px 16px; min-width:0; border-radius:12px 0 0 12px}
+.prox{display:block; max-width:100%; font-size:.78rem; font-weight:900; letter-spacing:.06em; line-height:1.25; text-align:center; text-transform:uppercase; padding:4px 10px; border-radius:6px; background:var(--pb,rgba(0,0,0,.45)); color:var(--pt,#fff)}
+.prox b{display:block; font-size:.68rem; letter-spacing:.1em; color:var(--s)}
 .corpo img{width:100%; max-width:290px; height:auto; display:block; filter:drop-shadow(0 4px 10px rgba(0,0,0,.35))}
 .canhoto{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;
   border-left:2px dashed color-mix(in srgb,var(--t) 40%,transparent); text-align:center; padding:12px 6px}
 .canhoto b{font-size:.66rem; letter-spacing:.14em; text-transform:uppercase; line-height:1.3}
 .canhoto i{font-style:normal; width:34px; height:34px; border-radius:50%; display:grid; place-items:center; background:var(--s); color:var(--a); font-size:1.1rem; font-weight:900}
 
-.antr{--a:#0b1638; --b:#1c2f6b; --t:#f3e2a6; --s:#d4af37}
-.antr .canhoto b{font-family:"Cinzel",Georgia,serif; letter-spacing:.08em}
-.antr .corpo{background:radial-gradient(circle at 20% 30%,rgba(255,255,255,.08) 0 1px,transparent 2px) 0 0/22px 22px}
-.nost{--a:#5b1a8c; --b:#c42b2b; --t:#fff4c2; --s:#ffd23f}
+/* A Night To Remember: ginásio do colégio (vermelho, branco e dourado) */
+.antr{--a:#7d0a1c; --b:#c8102e; --t:#fffdf7; --s:#f2b632; --pb:#150a05; --pt:#ffb000}
+.antr .canhoto b{font-family:"Graduate","Rockwell",Georgia,serif; font-weight:400; letter-spacing:.06em}
+.antr .canhoto i{color:#7d0a1c}
+.antr .corpo{background:radial-gradient(circle,rgba(255,253,247,.5) 0 2px,transparent 2.600px) 2px 4px/24px 22px,radial-gradient(circle,rgba(242,182,50,.55) 0 2px,transparent 2.600px) 14px 15px/24px 22px}
+.antr .prox b{color:#fffdf7}
+/* Nostalgias 2000: raios amarelos */
+.nost{--a:#ffd60a; --b:#ffd60a; --t:#3b2416; --s:#7b2cbf; --pb:#fff6e0; --pt:#ff2e4d}
+.nost{background:radial-gradient(60% 90% at 38% 50%,rgba(255,143,199,.85),rgba(255,143,199,0) 70%),repeating-conic-gradient(from 0deg at 38% 50%,#ffd60a 0 10deg,#ffe873 10deg 20deg)}
 .nost .canhoto b{font-family:"Bungee",Impact,sans-serif; font-weight:400; letter-spacing:.04em}
-.nost .corpo{background:repeating-conic-gradient(from 0deg at 50% 50%, rgba(255,210,63,.12) 0 10deg, transparent 10deg 20deg)}
-.mj{--a:#2a0f52; --b:#c2185b; --t:#fff3d6; --s:#ffb300}
-.mj .canhoto b{font-family:"Press Start 2P",ui-monospace,monospace; font-weight:400; font-size:.5rem; letter-spacing:.02em; line-height:1.7}
-.mj .corpo{background:repeating-linear-gradient(0deg, rgba(0,0,0,.18) 0 2px, transparent 2px 4px)}
-.lov{--a:#0b0709; --b:#5a0d3a; --t:#ffe3f1; --s:#ff1f8c}
+.nost .canhoto i{color:#ffd60a}
+.nost .prox{box-shadow:0 0 0 2px #3b2416}
+.nost .prox b{color:#7b2cbf}
+/* Festa do Michael: couro preto com costura e vermelho */
+.mj{--a:#111113; --b:#25252b; --t:#fbfaf6; --s:#e0191d; --pb:#fbfaf6; --pt:#0d0d0f}
+.mj .canhoto b{font-family:"Bebas Neue","Arial Narrow",Impact,sans-serif; font-weight:400; font-size:.92rem; letter-spacing:.08em}
+.mj .canhoto i{color:#fff}
+.mj .corpo{box-shadow:inset 0 0 0 2px #111113,inset 0 0 0 0 transparent; outline:2px dashed #6a6a74; outline-offset:-8px}
+.mj .prox b{color:#e0191d}
+/* Lovatic Experience: galpão escuro com luz rosa */
+.lov{--a:#0b0709; --b:#5a0d3a; --t:#ffe3f1; --s:#ff1f8c; --pb:#000; --pt:#ffe3f1}
 .lov .canhoto b{font-family:"Anton",Impact,sans-serif; font-weight:400; font-size:.8rem; letter-spacing:.1em}
+.lov .corpo{box-shadow:inset 7px 0 0 #ff1f8c,inset 20px 0 26px -10px rgba(255,31,140,.7)}
 .lov .corpo img{max-width:250px; filter:drop-shadow(0 0 12px rgba(255,31,140,.5))}
+.lov .prox{box-shadow:inset 0 0 0 1px #ff1f8c}
 
 footer{margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px))); margin-top:10px; background:var(--acido); color:var(--preto);
   padding:22px max(16px,env(safe-area-inset-left,0px)) calc(24px + env(safe-area-inset-bottom,0px)); display:grid; gap:6px; font-size:.92rem; line-height:1.5}
@@ -113,26 +128,26 @@ footer a{color:var(--preto); font-weight:900}
 
   <ul class="lista">
     <li>
-      <a class="ingresso antr" href="https://ingressos.gnarlyeventos.com.br/#antr" aria-label="A Night To Remember: ingressos">
-        <span class="corpo"><img src="logo-antr.webp" alt="A Night To Remember" width="600" height="226"></span>
+      <a class="ingresso antr" href="https://ingressos.gnarlyeventos.com.br/antr" aria-label="A Night To Remember: ingressos">
+        <span class="corpo"><img src="logo-antr.webp" alt="A Night To Remember" width="600" height="226"><span class="prox" id="prox-antr" hidden></span></span>
         <span class="canhoto"><b>Ingressos</b><i aria-hidden="true">→</i></span>
       </a>
     </li>
     <li>
       <a class="ingresso nost" href="https://ingressos.gnarlyeventos.com.br/#nostalgias" aria-label="Nostalgias 2000: ingressos">
-        <span class="corpo"><img src="logo-nostalgias.webp" alt="Nostalgias 2000" width="600" height="214"></span>
+        <span class="corpo"><img src="logo-nostalgias.webp" alt="Nostalgias 2000" width="600" height="214"><span class="prox" id="prox-nost" hidden></span></span>
         <span class="canhoto"><b>Ingressos</b><i aria-hidden="true">→</i></span>
       </a>
     </li>
     <li>
       <a class="ingresso mj" href="https://michael.gnarlyeventos.com.br/" aria-label="Festa do Michael Jackson: ingressos">
-        <span class="corpo"><img src="logo-michael.webp" alt="Festa do Michael Jackson" width="600" height="295"></span>
+        <span class="corpo"><img src="logo-michael.webp" alt="Festa do Michael Jackson" width="600" height="295"><span class="prox" id="prox-mj" hidden></span></span>
         <span class="canhoto"><b>Ingressos</b><i aria-hidden="true">→</i></span>
       </a>
     </li>
     <li>
       <a class="ingresso lov" href="https://lovatic.gnarlyeventos.com.br/" aria-label="Lovatic Experience: ingressos">
-        <span class="corpo"><img src="logo-lovatic.webp" alt="Lovatic Experience" width="720" height="194"></span>
+        <span class="corpo"><img src="logo-lovatic.webp" alt="Lovatic Experience" width="720" height="194"><span class="prox" id="prox-lov" hidden></span></span>
         <span class="canhoto"><b>Ingressos</b><i aria-hidden="true">→</i></span>
       </a>
     </li>
@@ -146,6 +161,33 @@ footer a{color:var(--preto); font-weight:900}
   </div>
 </footer>
 <script>
+/* Próxima data de cada festa: lê o eventos.json que o robô de cada página já publica.
+   Se não conseguir ler, o ingresso aparece só com o logo. */
+(function(){
+  var ORIGEM={
+    antr:["https://ingressos.gnarlyeventos.com.br/eventos.json",/night\s*to\s*remember/i],
+    nost:["https://ingressos.gnarlyeventos.com.br/eventos.json",/nostalgias/i],
+    mj:["https://michael.gnarlyeventos.com.br/eventos.json",/./],
+    lov:["https://lovatic.gnarlyeventos.com.br/eventos.json",/./]
+  };
+  var previa=null;try{previa=JSON.parse(document.getElementById("previa").textContent)}catch(e){}
+  var cache={};
+  function busca(u){return cache[u]||(cache[u]=fetch(u,{cache:"no-store"}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){return Array.isArray(d)?d:(d.eventos||[])}))}
+  function f(d,o){o.timeZone="America/Sao_Paulo";return new Intl.DateTimeFormat("pt-BR",o).format(d).replace(".","").toUpperCase()}
+  function pinta(k,lista){
+    var agora=Date.now();
+    var l=lista.filter(function(e){return e.publicado!==false&&!e.cancelado&&ORIGEM[k][1].test(e.nome||"")&&new Date(e.fim).getTime()>agora})
+      .sort(function(a,b){return new Date(a.inicio)-new Date(b.inicio)});
+    var el=document.getElementById("prox-"+k);if(!l.length||!el)return;
+    var d=new Date(l[0].inicio);
+    el.innerHTML="";el.appendChild(document.createTextNode(l[0].cidade+" · "+f(d,{weekday:"short"})+" "+f(d,{day:"2-digit"})+" "+f(d,{month:"short"})));
+    var b=document.createElement("b");b.textContent=l.length===1?"1 data à venda":l.length+" datas à venda";el.appendChild(b);
+    el.hidden=false;
+  }
+  Object.keys(ORIGEM).forEach(function(k){
+    busca(ORIGEM[k][0]).then(function(l){pinta(k,l)}).catch(function(){if(previa&&previa[k])pinta(k,previa[k])});
+  });
+})();
 document.addEventListener("click",function(e){var a=e.target.closest(".ingresso");if(!a)return;try{if(window.gtag)gtag("event","clique_festa",{festa:a.classList[1],festa_origem:"gnarly"})}catch(_){}
 if(e.target.closest("footer a"))try{gtag("event","clique_whatsapp",{origem:"gnarly"})}catch(_){}});
 </script>
