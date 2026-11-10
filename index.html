@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Gnarly Eventos</title>
+<meta name="description" content="Festa de fã pra fã. Ingressos da A Night To Remember, Nostalgias 2000, Festa do Michael Jackson e Lovatic Experience.">
+<meta name="theme-color" content="#0A0A0A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gnarly Eventos">
+<meta property="og:description" content="Festa de fã pra fã. Ingressos das nossas festas.">
+<meta property="og:image" content="https://gnarlyeventos.com.br/og.jpg">
+<meta property="og:url" content="https://gnarlyeventos.com.br/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Crect width='10' height='10' rx='2' fill='%230A0A0A'/%3E%3Cpath d='M2 2h6v2.6H4.5v.8h1V4.2H8V8H2z' fill='%23C8FF1F'/%3E%3C/svg%3E">
+<!-- Google tag (Analytics G-437SS7TQKQ) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-W2X5PHGB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-437SS7TQKQ');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,600;14..32,900&family=Cinzel:wght@700&family=Bungee&family=Press+Start+2P&family=Anton&display=swap">
+<style>
+/* Marca Gnarly: preto, branco e verde ácido. A Gnarly é o carimbo; cada ingresso leva a cor da própria festa. */
+:root{
+  --preto:#0A0A0A; --branco:#F4F4EF; --acido:#C8FF1F; --cinza:#8b8b86; --linha:#222;
+  --f-marca:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0}
+img{max-width:100%}
+body{
+  background:var(--preto); color:var(--branco); font-family:var(--f-marca); font-weight:600;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:44px 0;
+}
+main{max-width:520px; margin:0 auto; display:flex; flex-direction:column; gap:30px}
+header{display:grid; gap:10px}
+.marca{display:block; width:100%; height:auto; color:var(--branco)}
+.eventos{justify-self:end; font-size:clamp(.8rem,3.4vw,1.05rem); letter-spacing:.62em; margin-right:-.62em; color:var(--branco)}
+.assinatura{margin:6px 0 0; font-weight:900; font-size:clamp(1.9rem,9vw,2.8rem); line-height:.98; letter-spacing:-.03em; color:var(--acido)}
+
+.lista{display:flex; flex-direction:column; gap:14px; margin:0; padding:0; list-style:none}
+.ingresso{
+  --a:#000; --b:#000; --t:#fff; --s:#fff;
+  position:relative; display:grid; grid-template-columns:1fr 88px; min-height:124px;
+  color:var(--t); text-decoration:none; border-radius:12px;
+  background:linear-gradient(135deg,var(--a),var(--b));
+  -webkit-mask:
+    radial-gradient(circle 11px at calc(100% - 88px) 0,#0000 98%,#000) top/100% 51% no-repeat,
+    radial-gradient(circle 11px at calc(100% - 88px) 100%,#0000 98%,#000) bottom/100% 51% no-repeat;
+          mask:
+    radial-gradient(circle 11px at calc(100% - 88px) 0,#0000 98%,#000) top/100% 51% no-repeat,
+    radial-gradient(circle 11px at calc(100% - 88px) 100%,#0000 98%,#000) bottom/100% 51% no-repeat;
+  transition:transform .18s ease, filter .18s ease;
+}
+.ingresso:hover{transform:translateY(-3px); filter:brightness(1.08)}
+.ingresso:focus-visible{outline:none; filter:brightness(1.15)}
+.ingresso:focus-visible .corpo{box-shadow:inset 0 0 0 3px var(--acido)}
+.corpo{display:flex; align-items:center; justify-content:center; padding:14px 16px; min-width:0; border-radius:12px 0 0 12px}
+.corpo img{width:100%; max-width:290px; height:auto; display:block; filter:drop-shadow(0 4px 10px rgba(0,0,0,.35))}
+.canhoto{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;
+  border-left:2px dashed color-mix(in srgb,var(--t) 40%,transparent); text-align:center; padding:12px 6px}
+.canhoto b{font-size:.66rem; letter-spacing:.14em; text-transform:uppercase; line-height:1.3}
+.canhoto i{font-style:normal; width:34px; height:34px; border-radius:50%; display:grid; place-items:center; background:var(--s); color:var(--a); font-size:1.1rem; font-weight:900}
+
+.antr{--a:#0b1638; --b:#1c2f6b; --t:#f3e2a6; --s:#d4af37}
+.antr .canhoto b{font-family:"Cinzel",Georgia,serif; letter-spacing:.08em}
+.antr .corpo{background:radial-gradient(circle at 20% 30%,rgba(255,255,255,.08) 0 1px,transparent 2px) 0 0/22px 22px}
+.nost{--a:#5b1a8c; --b:#c42b2b; --t:#fff4c2; --s:#ffd23f}
+.nost .canhoto b{font-family:"Bungee",Impact,sans-serif; font-weight:400; letter-spacing:.04em}
+.nost .corpo{background:repeating-conic-gradient(from 0deg at 50% 50%, rgba(255,210,63,.12) 0 10deg, transparent 10deg 20deg)}
+.mj{--a:#2a0f52; --b:#c2185b; --t:#fff3d6; --s:#ffb300}
+.mj .canhoto b{font-family:"Press Start 2P",ui-monospace,monospace; font-weight:400; font-size:.5rem; letter-spacing:.02em; line-height:1.7}
+.mj .corpo{background:repeating-linear-gradient(0deg, rgba(0,0,0,.18) 0 2px, transparent 2px 4px)}
+.lov{--a:#0b0709; --b:#5a0d3a; --t:#ffe3f1; --s:#ff1f8c}
+.lov .canhoto b{font-family:"Anton",Impact,sans-serif; font-weight:400; font-size:.8rem; letter-spacing:.1em}
+.lov .corpo img{max-width:250px; filter:drop-shadow(0 0 12px rgba(255,31,140,.5))}
+
+footer{margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px))); margin-top:10px; background:var(--acido); color:var(--preto);
+  padding:22px max(16px,env(safe-area-inset-left,0px)) calc(24px + env(safe-area-inset-bottom,0px)); display:grid; gap:6px; font-size:.92rem; line-height:1.5}
+footer strong{font-weight:900; font-size:1.05rem; letter-spacing:.02em}
+footer a{color:var(--preto); font-weight:900}
+.rodape-miolo{max-width:520px; margin:0 auto; width:100%; display:grid; gap:6px}
+
+@media (max-width:380px){
+  .ingresso{grid-template-columns:1fr 76px; min-height:108px;
+    -webkit-mask:
+      radial-gradient(circle 10px at calc(100% - 76px) 0,#0000 98%,#000) top/100% 51% no-repeat,
+      radial-gradient(circle 10px at calc(100% - 76px) 100%,#0000 98%,#000) bottom/100% 51% no-repeat;
+            mask:
+      radial-gradient(circle 10px at calc(100% - 76px) 0,#0000 98%,#000) top/100% 51% no-repeat,
+      radial-gradient(circle 10px at calc(100% - 76px) 100%,#0000 98%,#000) bottom/100% 51% no-repeat;}
+}
+@media (prefers-reduced-motion:reduce){.ingresso{transition:none}.ingresso:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<main>
+  <header>
+    <h1 style="margin:0"><svg class="marca" viewBox="-4 -4 988 208" role="img" aria-label="Gnarly"><g fill="currentColor" fill-rule="evenodd" stroke="currentColor" stroke-width="8" stroke-linejoin="round"><path transform='translate(0,0)' d='M0,0 L150,0 L150,66 L62,66 L62,134 L86,134 L86,90 L150,90 L150,200 L0,200Z'/><path transform='translate(174,0)' d='M0,0 L92,0 L92,125 L116,125 L116,0 L150,0 L150,200 L58,200 L58,75 L34,75 L34,200 L0,200Z'/><path transform='translate(348,0)' d='M0,60 L36,0 L114,0 L150,60 L150,200 L87,200 L87,122 L63,122 L63,200 L0,200ZM60,52 L90,52 L90,80 L60,80Z'/><path transform='translate(522,0)' d='M0,0 L150,0 L150,92 L112,92 L112,116 L150,116 L150,200 L87,200 L87,130 L63,130 L63,200 L0,200ZM58,48 L94,48 L94,74 L58,74Z'/><path transform='translate(696,0)' d='M0,0 L50,0 L50,150 L110,150 L110,200 L0,200Z'/><path transform='translate(830,0)' d='M0,0 L63,0 L63,78 L87,78 L87,0 L150,0 L150,70 L102,122 L102,200 L48,200 L48,122 L0,70Z'/></g></svg></h1>
+    <span class="eventos">EVENTOS</span>
+    <p class="assinatura">Festa de fã<br>pra fã.</p>
+  </header>
+
+  <ul class="lista">
+    <li>
+      <a class="ingresso antr" href="https://ingressos.gnarlyeventos.com.br/#antr" aria-label="A Night To Remember: ingressos">
+        <span class="corpo"><img src="logo-antr.webp" alt="A Night To Remember" width="600" height="226"></span>
+        <span class="canhoto"><b>Ingressos</b><i aria-hidden="true">→</i></span>
+      </a>
+    </li>
+    <li>
+      <a class="ingresso nost" href="https://ingressos.gnarlyeventos.com.br/#nostalgias" aria-label="Nostalgias 2000: ingressos">
+        <span class="corpo"><img src="logo-nostalgias.webp" alt="Nostalgias 2000" width="600" height="214"></span>
+        <span class="canhoto"><b>Ingressos</b><i aria-hidden="true">→</i></span>
+      </a>
+    </li>
+    <li>
+      <a class="ingresso mj" href="https://michael.gnarlyeventos.com.br/" aria-label="Festa do Michael Jackson: ingressos">
+        <span class="corpo"><img src="logo-michael.webp" alt="Festa do Michael Jackson" width="600" height="295"></span>
+        <span class="canhoto"><b>Ingressos</b><i aria-hidden="true">→</i></span>
+      </a>
+    </li>
+    <li>
+      <a class="ingresso lov" href="https://lovatic.gnarlyeventos.com.br/" aria-label="Lovatic Experience: ingressos">
+        <span class="corpo"><img src="logo-lovatic.webp" alt="Lovatic Experience" width="720" height="194"></span>
+        <span class="canhoto"><b>Ingressos</b><i aria-hidden="true">→</i></span>
+      </a>
+    </li>
+  </ul>
+</main>
+<footer>
+  <div class="rodape-miolo">
+    <strong>PARA MAIORES DE 18 ANOS</strong>
+    <span>Obrigatório apresentação de documento original com foto</span>
+    <span>Atendimento no WhatsApp <a href="https://wa.me/5511957293333">(11) 95729-3333</a></span>
+  </div>
+</footer>
+<script>
+document.addEventListener("click",function(e){var a=e.target.closest(".ingresso");if(!a)return;try{if(window.gtag)gtag("event","clique_festa",{festa:a.classList[1],festa_origem:"gnarly"})}catch(_){}
+if(e.target.closest("footer a"))try{gtag("event","clique_whatsapp",{origem:"gnarly"})}catch(_){}});
+</script>
+</body>
+</html>
