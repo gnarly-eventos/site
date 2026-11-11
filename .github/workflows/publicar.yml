@@ -26,7 +26,7 @@ jobs:
       - name: Montar o site
         run: |
           mkdir _site
-          cp index.html robots.txt og-gnarly.jpg *.webp _site/
+          cp index.html robots.txt og-gnarly-2.jpg *.webp _site/
 
       - uses: actions/configure-pages@v5
 
