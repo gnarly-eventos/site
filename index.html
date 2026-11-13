@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Gnarly Eventos</title>
-<meta name="description" content="Festa de fã pra fã. Ingressos da A Night To Remember, Nostalgias 2000, Festa do Michael Jackson e Lovatic Experience.">
+<meta name="description" content="Festa de fã pra fã. Ingressos da A Night To Remember, Nostalgias 2000, Festa do Michael Jackson, Lovatic Experience e Festa do Harry Styles.">
 <meta name="theme-color" content="#0A0A0A">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Gnarly Eventos">
@@ -23,7 +23,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,600;14..32,900&family=Graduate&family=Bungee&family=Bebas+Neue&family=Anton&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,600;14..32,900&family=Graduate&family=Bungee&family=Bebas+Neue&family=Anton&family=Nunito:wght@900&display=swap">
 <style>
 /* Marca Gnarly: preto, branco e verde ácido. A Gnarly é o carimbo; cada ingresso leva a cor da própria festa. */
 :root{
@@ -99,6 +99,16 @@ header{display:grid; gap:10px}
 .lov .corpo{box-shadow:inset 7px 0 0 #ff1f8c,inset 20px 0 26px -10px rgba(255,31,140,.7)}
 .lov .corpo img{max-width:250px; filter:drop-shadow(0 0 12px rgba(255,31,140,.5))}
 .lov .prox{box-shadow:inset 0 0 0 1px #ff1f8c}
+/* Festa do Harry Styles: cartaz anos 70, creme com raios e xadrez rosa */
+.hs{--a:#fff3df; --b:#fff3df; --t:#3a1430; --s:#e63b2e; --pb:#3a1430; --pt:#fff3df}
+.hs{background:conic-gradient(#ff5fa2 25%,#fff3df 0 50%,#ff5fa2 0 75%,#fff3df 0) 0 0/16px 16px}
+.hs .corpo{margin:8px 0 8px 8px; padding:12px 6px; border-radius:8px; background:repeating-conic-gradient(from 0deg at 50% 60%,#ffe6c4 0 10deg,#fff3df 10deg 20deg)}
+.hs .canhoto{margin:8px 8px 8px 0; border-radius:8px; background:#fff3df; border-left-color:#3a1430}
+.hs .canhoto b{font-family:"Nunito",system-ui,sans-serif; font-weight:900}
+.hs .canhoto i{color:#fff}
+.hs .prox{font-size:.72rem; letter-spacing:.04em}
+.hs .prox b{color:#ffc93c}
+.hs .corpo img{max-width:270px; filter:drop-shadow(3px 3px 0 rgba(58,20,48,.85))}
 
 footer{margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px))); margin-top:10px; background:var(--acido); color:var(--preto);
   padding:22px max(16px,env(safe-area-inset-left,0px)) calc(24px + env(safe-area-inset-bottom,0px)); display:grid; gap:6px; font-size:.92rem; line-height:1.5}
@@ -152,6 +162,12 @@ footer a{color:var(--preto); font-weight:900}
         <span class="canhoto"><b>Ingressos</b><i aria-hidden="true">→</i></span>
       </a>
     </li>
+    <li>
+      <a class="ingresso hs" href="https://harry.gnarlyeventos.com.br/" aria-label="Festa do Harry Styles: ingressos">
+        <span class="corpo"><img src="logo-harry.webp" alt="Festa do Harry Styles" width="900" height="326"><span class="prox" id="prox-hs" hidden></span></span>
+        <span class="canhoto"><b>Ingressos</b><i aria-hidden="true">→</i></span>
+      </a>
+    </li>
   </ul>
 </main>
 <footer>
@@ -169,7 +185,8 @@ footer a{color:var(--preto); font-weight:900}
     antr:["https://ingressos.gnarlyeventos.com.br/eventos.json",/night\s*to\s*remember/i],
     nost:["https://ingressos.gnarlyeventos.com.br/eventos.json",/nostalgias/i],
     mj:["https://michael.gnarlyeventos.com.br/eventos.json",/./],
-    lov:["https://lovatic.gnarlyeventos.com.br/eventos.json",/./]
+    lov:["https://lovatic.gnarlyeventos.com.br/eventos.json",/./],
+    hs:["https://harry.gnarlyeventos.com.br/eventos.json",/./]
   };
   var previa=null;try{previa=JSON.parse(document.getElementById("previa").textContent)}catch(e){}
   var cache={};
